@@ -2,8 +2,8 @@
 import RPi.GPIO as GPIO
 import time
 
-greenPin = 3
-redPin = 4
+greenPin = 17
+redPin = 27
 
 # Zet de pinmode op Broadcom SOC.
 GPIO.setmode(GPIO.BCM)
