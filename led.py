@@ -1,19 +1,16 @@
 # importeer de GPIO bibliotheek.
 import RPi.GPIO as GPIO
 
-ledPin = 4
+ledPin = 17
 
 # Zet de pinmode op Broadcom SOC.
 GPIO.setmode(GPIO.BCM)
+GPIO.cleanup()
+GPIO.setwarnings(False)
 
-# Zet waarschuwingen uit.
-# GPIO.setwarnings(False)
- 
-# Zet de GPIO pin als uitgang.
+
 GPIO.setup(ledPin, GPIO.OUT)
- 
-# Zet de LED aan.
-GPIO.output(ledPin, 1)
 
+print "Led aan"
 
-sleep(5)
+GPIO.output(ledPin, GPIO.HIGH)
