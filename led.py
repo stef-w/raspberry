@@ -12,9 +12,10 @@ GPIO.setwarnings(False)
 
 GPIO.setup(ledPin, GPIO.OUT)
 
-print "Led aan"
-GPIO.output(ledPin, GPIO.HIGH)
-time.sleep(10)
+while True:
+	print "Led aan"
+	GPIO.output(ledPin, GPIO.HIGH)
+	time.sleep(1)
 
-print "Led uit"
-GPIO.output(ledPin, GPIO.LOW)
+	print "Led uit"
+	GPIO.output(ledPin, GPIO.LOW)
