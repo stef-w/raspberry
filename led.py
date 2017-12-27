@@ -2,7 +2,8 @@
 import RPi.GPIO as GPIO
 import time
 
-ledPin = 17
+greenPin = 3
+redPin = 4
 
 # Zet de pinmode op Broadcom SOC.
 GPIO.setmode(GPIO.BCM)
@@ -10,14 +11,18 @@ GPIO.cleanup()
 GPIO.setwarnings(False)
 
 
-GPIO.setup(ledPin, GPIO.OUT)
+GPIO.setup(redPin, GPIO.OUT)
+GPIO.setup(greenPin, GPIO.OUT)
+
 
 while True:
 	
-	print "Led aan"
-	GPIO.output(ledPin, GPIO.HIGH)
+	print "Groen aan / rood uit"
+	GPIO.output(greenPin, GPIO.HIGH)
+	GPIO.output(redPin, GPIO.LOW)
 	time.sleep(1)
 
-	print "Led uit"
-	GPIO.output(ledPin, GPIO.LOW)
+	print "Groen aan / rood uit"
+	GPIO.output(greenPin, GPIO.LOW)
+	GPIO.output(redPin, GPIO.HIGH)
 	time.sleep(1)
