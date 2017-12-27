@@ -1,9 +1,8 @@
-#!/bin/python
- 
-ledPin = 7
- 
 # importeer de GPIO bibliotheek.
 import RPi.GPIO as GPIO
+
+ledPin = 7
+
  
 # Zet de pinmode op Broadcom SOC.
 GPIO.setmode(GPIO.BCM)
