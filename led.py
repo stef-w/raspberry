@@ -13,9 +13,11 @@ GPIO.setwarnings(False)
 GPIO.setup(ledPin, GPIO.OUT)
 
 while True:
+	
 	print "Led aan"
 	GPIO.output(ledPin, GPIO.HIGH)
 	time.sleep(1)
 
 	print "Led uit"
 	GPIO.output(ledPin, GPIO.LOW)
+	time.sleep(1)
